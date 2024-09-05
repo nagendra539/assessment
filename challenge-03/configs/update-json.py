@@ -8,10 +8,14 @@ def update_json(csv_file, json_file, env):
     with open(csv_file, mode='r') as file:
         csv_reader = csv.DictReader(file)
         for row in csv_reader:
-            # Assuming the first column in CSV is the key, and the second column is the value
-            key = row['key']
-            value = row['value']
-            data_to_update[key] = value
+            env = row['ENV']
+            data_to_update[env] = {
+                "host": row["host"],
+                "port": int(row["port"]),  # Convert port to integer
+                "dbname": row["dbname"],
+                "user": row["user"],
+                "password": row["password"]
+            }
     print (data_to_update)
 
     # Read the JSON file
