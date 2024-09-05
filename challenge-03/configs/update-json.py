@@ -36,7 +36,7 @@ def update_json(csv_file, json_file, env):
     with open(json_file, 'w') as file:
         json.dump(json_data, file, indent=4)
 
-   print(f"JSON file updated successfully for environment: {env}")
+    print(f"JSON file updated successfully for environment: {env}")
 
 if __name__ == "__main__":
     # Ensure that the correct number of arguments are provided
