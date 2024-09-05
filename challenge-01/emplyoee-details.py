@@ -11,4 +11,4 @@ for id in Employees['id']:
 print("Employee names which are not using the Company device:")
 Difference_list= Employees[~Employees['id'].isin(common1)]
 
-print (Difference_list[['first_name''last_name']])
+print (Difference_list[['first_name','last_name']])
