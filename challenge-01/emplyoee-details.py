@@ -11,12 +11,11 @@ for id in Employees['id']:
         if id == empid:
             common1.append(id)
 
-print(common1)
 
-filtered_df = Employees[Employees['id'].isin(common1)]
-print(filtered_df)
+# filtered_df = Employees[Employees['id'].isin(common1)]
+# print(filtered_df)
 
-not_in_column = Employees[[item for item in Employees['id'].values if item not in common1]]
+not_in_column = [item for item in Employees['id'].values if item not in common1]
 print(not_in_column)
 
             
