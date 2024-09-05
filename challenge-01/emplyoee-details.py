@@ -19,7 +19,7 @@ for id in Employees['id']:
 # print(not_in_column)
 
 for column in Employees.columns:
-    not_in_list = df[~df[column].isin(common1)][column]
+    not_in_list = Employees[~Employees[column].isin(common1)][column]
     print(f"Elements in column '{column}' not in list:")
     print(not_in_list.values)
     print('-' * 50)
