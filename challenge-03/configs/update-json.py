@@ -4,14 +4,14 @@ import sys
 
 def update_json(csv_file, json_file, env):
     # Read the CSV file and store its contents in a dictionary
-    print(env)
+    #print(env)
     data_to_update = {}
     with open(csv_file, mode='r') as file:
         csv_reader = csv.DictReader(file)
         for row in csv_reader:
             env1 = row['ENV']
             if env == env1:
-                print(env1)
+                #print(env1)
                 data_to_update[env1] = {
                      "host": row["host"],
                      "port": int(row["port"]),  # Convert port to integer
@@ -23,7 +23,7 @@ def update_json(csv_file, json_file, env):
     # Read the JSON file
     with open(json_file, 'r') as file:
         json_data = json.load(file)
-    print (json_data)
+    #print (json_data)
 
     for env, data in data_to_update.items():
         if env in json_data:
@@ -31,7 +31,7 @@ def update_json(csv_file, json_file, env):
         else:
             # Add new environment section if it doesn't exist
             json_data[env] = data
-    print (json_data)
+    #print (json_data)
 
     # Write the updated data back to the JSON file
     with open(json_file, 'w') as file:
