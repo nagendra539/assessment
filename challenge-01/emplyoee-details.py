@@ -5,6 +5,5 @@ Devices = pd.read_excel("table_data.xlsx", sheet_name="Devices")
 print(Employees)
 print(Devices)
 
-Emp_Dev = pd.merge(Devices, Employees, on='employee_id', how='left', indicator=True)
-
-print(Emp_Dev)
+for id in Employees[id]:
+    print(id)
