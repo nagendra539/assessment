@@ -9,7 +9,10 @@ for id in Employees['id']:
     for empid in Devices['employee_id']:
         if id == empid:
             common1.append(id)
-print("Employee names which are not using the Company device:")
+
 # gettting the data which ids are not present ih the list.
 Difference_list= Employees[~Employees['id'].isin(common1)]
+
+print("Employee names which are not using the Company device:")
+# print the firstname and last names of the employees who are not using the company device.
 print (Difference_list[['first_name','last_name']].values)
