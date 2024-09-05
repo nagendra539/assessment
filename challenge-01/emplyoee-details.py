@@ -6,4 +6,6 @@ print(Employees)
 print(Devices)
 
 for id in Employees['id']:
-    print(id)
+    for empid in Devices['employee_id']:
+        if id == empid:
+            print("matched:" empid)
