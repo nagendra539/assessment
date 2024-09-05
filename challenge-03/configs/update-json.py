@@ -24,6 +24,7 @@ def update_json(csv_file, json_file, env):
     print (json_data)
 
     for env, data in data_to_update.items():
+        print (env)
         if env in json_data:
             json_data[env].update(data)
         # else:
