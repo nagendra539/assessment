@@ -38,7 +38,7 @@ def update_json(csv_file, json_file, env):
         json.dump(json_data, file, indent=4)
 
     #
-    # print(f"JSON file updated successfully for environment: {env}")
+    print(f"JSON file updated successfully for environment: {env}")
 
 if __name__ == "__main__":
     # Ensure that the correct number of arguments are provided
@@ -54,3 +54,4 @@ if __name__ == "__main__":
         update_json(csv_file, json_file, env)
     else:
         print("Please enter the proper Env variables")
+        sys.exit(1)
