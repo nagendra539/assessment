@@ -9,7 +9,7 @@ common = []
 for id in Employees['id']:
     for empid in Devices['employee_id']:
         if id == empid:
-            common.append[id]
+            common.append(id)
 
 print(common)
             
