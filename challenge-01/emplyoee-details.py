@@ -15,7 +15,7 @@ print(common1)
 
 filtered_df = Employees[Employees['id'].isin(common1)]
 
-print(filtered_df.['first_name'])
+print(filtered_df['first_name'])
 
 
             
