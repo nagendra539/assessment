@@ -40,3 +40,4 @@ if __name__ == "__main__":
     csv_file = sys.argv[1]
     json_file = sys.argv[2]
     env = sys.argv[3]
+update_json(csv_file, json_file, env)
