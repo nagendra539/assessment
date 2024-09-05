@@ -1,4 +1,6 @@
 import pandas as pd
 
-df = pd.read_excel("table_data.xlsx", sheet_name="Emloyees")
-print(df)
+Employees = pd.read_excel("table_data.xlsx", sheet_name="Employees")
+Devices = pd.read_excel("table_data.xlsx", sheet_name="Devices")
+print(Employees)
+print(Devices)
