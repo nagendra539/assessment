@@ -8,7 +8,7 @@ def update_json(csv_file, json_file, env):
     with open(csv_file, mode='r') as file:
         csv_reader = csv.DictReader(file)
         for row in csv_reader:
-            env = row['ENV']
+            #env = row['ENV']
             data_to_update[env] = {
                 "host": row["host"],
                 "port": int(row["port"]),  # Convert port to integer
