@@ -29,6 +29,7 @@ def update_json(csv_file, json_file, env):
         else:
             # Add new environment section if it doesn't exist
             json_data[env] = data
+    print (json_data)
 
     # # Update only the part of the JSON file related to the given environment
     # if env in json_data:
