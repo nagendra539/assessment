@@ -1,10 +1,14 @@
+# Please install pandas and it's dependencies.
+# for running the below script, "python3 employee-details.py"
+# added the output.txt file for sample output.
+
 import pandas as pd
 
 Employees = pd.read_excel("table_data.xlsx", sheet_name="Employees")
 Devices = pd.read_excel("table_data.xlsx", sheet_name="Devices")
 common1 = []
 
-# we are comparing the employee_id and id colums in two sheets and append the id to the list 
+# we are comparing the employee_id in Devices and id in Employees sheet colums and append the id to the list 
 for id in Employees['id']:
     for empid in Devices['employee_id']:
         if id == empid:

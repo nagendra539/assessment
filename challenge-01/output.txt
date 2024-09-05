@@ -1,0 +1,5 @@
+Employee names which are not using the Company device:
+[['Mike' 'Dalton']
+ ['Kayla' 'McCarthy']
+ ['Karen' 'Smith']
+ ['Joe' 'Johnson']]
