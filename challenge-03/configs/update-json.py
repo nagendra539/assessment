@@ -35,13 +35,13 @@ def update_json(csv_file, json_file, env):
 
 #     print(f"JSON file updated successfully for environment: {env}")
 
-# if __name__ == "__main__":
-#     # Ensure that the correct number of arguments are provided
-#     if len(sys.argv) != 4:
-#         print("Usage: python script.py <csv_file> <json_file> <env>")
-#         sys.exit(1)
+if __name__ == "__main__":
+    # Ensure that the correct number of arguments are provided
+    if len(sys.argv) != 4:
+        print("Usage: python script.py <csv_file> <json_file> <env>")
+        sys.exit(1)
 
-#     csv_file = sys.argv[1]
-#     json_file = sys.argv[2]
-#     env = sys.argv[3]
+    csv_file = sys.argv[1]
+    json_file = sys.argv[2]
+    env = sys.argv[3]
 update_json(csv_file, json_file, env)
