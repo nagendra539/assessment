@@ -17,9 +17,8 @@ def update_json(csv_file, json_file, env):
                      "user": row["user"],
                     "password": row["password"]
                     }
-    print (data_to_update)
-
-
+            else:
+                print("Please enter the proper Environment like DEV or PROD")
     # Read the JSON file
     with open(json_file, 'r') as file:
         json_data = json.load(file)
@@ -37,7 +36,7 @@ def update_json(csv_file, json_file, env):
     with open(json_file, 'w') as file:
         json.dump(json_data, file, indent=4)
 
-#     print(f"JSON file updated successfully for environment: {env}")
+   print(f"JSON file updated successfully for environment: {env}")
 
 if __name__ == "__main__":
     # Ensure that the correct number of arguments are provided
