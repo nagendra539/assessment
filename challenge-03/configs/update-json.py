@@ -8,7 +8,6 @@ def update_json(csv_file, json_file, env):
     with open(csv_file, mode='r') as file:
         csv_reader = csv.DictReader(file)
         for row in csv_reader:
-            #env = row['ENV']
             data_to_update[env] = {
                 "host": row["host"],
                 "port": int(row["port"]),  # Convert port to integer
@@ -24,12 +23,11 @@ def update_json(csv_file, json_file, env):
     print (json_data)
 
     for env, data in data_to_update.items():
-        print (env)
         if env in json_data:
             json_data[env].update(data)
-        # else:
-        #     # Add new environment section if it doesn't exist
-        #     json_data[env] = data
+        else:
+            # Add new environment section if it doesn't exist
+            json_data[env] = data
     print (json_data)
 
     # # Update only the part of the JSON file related to the given environment
@@ -39,9 +37,9 @@ def update_json(csv_file, json_file, env):
     #     print(f"Environment {env} not found in JSON file.")
     #     return
 
-#     # Write the updated data back to the JSON file
-#     with open(json_file, 'w') as file:
-#         json.dump(json_data, file, indent=4)
+    # Write the updated data back to the JSON file
+    with open(json_file, 'w') as file:
+        json.dump(json_data, file, indent=4)
 
 #     print(f"JSON file updated successfully for environment: {env}")
 
