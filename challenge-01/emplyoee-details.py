@@ -12,8 +12,8 @@ for id in Employees['id']:
             common1.append(id)
 
 
- filtered_df = Employees[~Employees['id'].isin(common1)]
- print(filtered_df)
+print(Employees[~Employees['id'].isin(common1)])
+ #print(filtered_df)
 
 # not_in_column = [item for item in Employees['id'].values if item not in common1]
 # print(not_in_column)
