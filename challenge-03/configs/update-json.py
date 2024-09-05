@@ -49,7 +49,8 @@ if __name__ == "__main__":
     csv_file = sys.argv[1]
     json_file = sys.argv[2]
     env = sys.argv[3]
-    if env != 'PROD' or env != 'DEV' :
-        print ("Please enter the environment as PROD or DEV")
-        sys.exit(1)
-update_json(csv_file, json_file, env)
+    accepted_strings = ['PROD', 'DEV']
+    if env in accepted_strings:
+        update_json(csv_file, json_file, env)
+    else:
+        print("Please enter the proper Env variables")
