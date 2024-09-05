@@ -6,5 +6,4 @@ print(Employees.index[0])
 print(Devices.index[0])
 
 for row in Employees:
-    print(row[id], row[first_name], row[last_name])
-    
+    print(row[1], row[2], row[3])
