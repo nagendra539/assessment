@@ -5,9 +5,6 @@ import sys
 def update_json(csv_file, json_file, env):
     # Read the CSV file and store its contents in a dictionary
     #print(env)
-    if env != 'PROD' or env != 'DEV' :
-        print ("Please enter the environment as PROD or DEV")
-        sys.exit(1)
     data_to_update = {}
     with open(csv_file, mode='r') as file:
         csv_reader = csv.DictReader(file)
@@ -52,4 +49,7 @@ if __name__ == "__main__":
     csv_file = sys.argv[1]
     json_file = sys.argv[2]
     env = sys.argv[3]
+    if env != 'PROD' or env != 'DEV' :
+        print ("Please enter the environment as PROD or DEV")
+        sys.exit(1)
 update_json(csv_file, json_file, env)
