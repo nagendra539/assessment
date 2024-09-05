@@ -4,12 +4,13 @@ import sys
 
 def update_json(csv_file, json_file, env):
     # Read the CSV file and store its contents in a dictionary
+    print(env)
     data_to_update = {}
     with open(csv_file, mode='r') as file:
         csv_reader = csv.DictReader(file)
         for row in csv_reader:
             env1 = row['ENV']
-            if env == env1:
+            if env.equals(env1):
                 data_to_update[env1] = {
                      "host": row["host"],
                      "port": int(row["port"]),  # Convert port to integer
@@ -20,6 +21,7 @@ def update_json(csv_file, json_file, env):
             else:
                 print("Please enter the proper Environment like DEV or PROD")
                 sys.exit(1)
+        print(data_to_update)
     # Read the JSON file
     with open(json_file, 'r') as file:
         json_data = json.load(file)
