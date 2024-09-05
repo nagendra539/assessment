@@ -1,0 +1,7 @@
+services:
+  webapp:
+    image: go-simple:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/data"
