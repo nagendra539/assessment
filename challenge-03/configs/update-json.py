@@ -9,13 +9,14 @@ def update_json(csv_file, json_file, env):
         csv_reader = csv.DictReader(file)
         for row in csv_reader:
             env1 = row['ENV']
-            data_to_update[env1] = {
-                "host": row["host"],
-                "port": int(row["port"]),  # Convert port to integer
-                "dbname": row["dbname"],
-                "user": row["user"],
-                "password": row["password"]
-            }
+            if env == env1:
+                data_to_update[env1] = {
+                     "host": row["host"],
+                     "port": int(row["port"]),  # Convert port to integer
+                     "dbname": row["dbname"],
+                     "user": row["user"],
+                    "password": row["password"]
+                    }
     print (data_to_update)
 
 
