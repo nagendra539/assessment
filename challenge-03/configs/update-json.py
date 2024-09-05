@@ -19,9 +19,6 @@ def update_json(csv_file, json_file, env):
                      "user": row["user"],
                     "password": row["password"]
                     }
-            else:
-                print("Please enter the proper Environment like DEV or PROD")
-                sys.exit(1)
         print(data_to_update)
     # Read the JSON file
     with open(json_file, 'r') as file:
