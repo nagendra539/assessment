@@ -5,5 +5,5 @@ Devices = pd.read_excel("table_data.xlsx", sheet_name="Devices")
 print(Employees)
 print(Devices)
 
-for id in Employees[id]:
+for id in Employees['id']:
     print(id)
